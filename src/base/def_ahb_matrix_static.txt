@@ -1,0 +1,32 @@
+SWAP MSTRS MASTER_NUM
+SWAP SLVS EXPR(SLAVE_NUM+DVAL(DECERR_SLV))
+
+LOOP MX MSTRS
+LOOP SX SLVS
+
+SWAP MSTR_BITS LOG2(MSTRS) 
+SWAP SLV_BITS  LOG2(SLVS) 
+
+SWAP SERR EXPR(SLVS-1)
+
+
+
+GROUP AHB_CMD is {
+  HADDR   ADDR_BITS   input
+  HBURST  3           input
+  HSIZE   2           input
+  HTRANS  2           input
+  HWRITE  1           input
+}
+
+GROUP AHB_RESP is {
+  HWDATA  DATA_BITS   input
+  HRDATA  DATA_BITS   output
+  HRESP   1           output
+}
+
+GROUP AHB joins {
+  GROUP AHB_CMD
+  GROUP AHB_RESP
+  HREADY  1           output
+}
