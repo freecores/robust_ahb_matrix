@@ -14,7 +14,7 @@ In order to create the Verilog design use the run.sh script in the run directory
 
 The RobustVerilog top source file is ahb_matrix.v, it calls the top definition file named def_ahb_matrix.txt.
 
-The default definition file def_ic.txt generates a fabric with 3 masters and 6 slaves.
+The default definition file def_ahb_matrix.txt generates a fabric with 3 masters and 6 slaves.
 
 Changing the interconnect parameters should be made only in def_ahb_matrix.txt in the src/base directory (changing master num, slave num etc.).
 
