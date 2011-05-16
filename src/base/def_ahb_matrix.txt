@@ -1,15 +1,15 @@
 
 INCLUDE def_ahb_matrix_static.txt
 
-SWAP.GLOBAL #FFD  #1                            ##flip-flop delay
+SWAP.GLOBAL #FFD  #1                                 ##flip-flop delay
 
-SWAP PREFIX     ahb_matrix_MASTER_NUM_SLAVE_NUM ##prefix for all module and file names
+SWAP.USER PREFIX     ahb_matrix_MASTER_NUM_SLAVE_NUM      ##Prefix for all module and file names
 
-SWAP MASTER_NUM 3                               ##number of masters
-SWAP SLAVE_NUM  6                               ##number of slaves
+SWAP.USER MASTER_NUM 3                               ##Number of masters
+SWAP.USER SLAVE_NUM  6                               ##Number of slaves
 
-DEFINE DEF_DECERR_SLV                           ##use interanl decode slave error
+DEFINE.USER DEF_DECERR_SLV                           ##Use interanl decode slave error
 
-SWAP DATA_BITS 32                               ##AHB data bits
-SWAP ADDR_BITS 32                               ##AHB address bits
+SWAP.USER DATA_BITS 32                               ##AHB data bits
+SWAP.USER ADDR_BITS 32                               ##AHB address bits
 
