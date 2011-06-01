@@ -27,7 +27,7 @@
 ////                                                             ////
 //////////////////////////////////////////////////////////////////##>
 
-SWAP MODEL_NAME AHB matrix
+SWAP.GLOBAL MODEL_NAME AHB matrix
 
 SWAP MSTRS MASTER_NUM
 SWAP SLVS EXPR(SLAVE_NUM+DVAL(DECERR_SLV))
