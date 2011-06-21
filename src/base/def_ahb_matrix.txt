@@ -31,6 +31,8 @@ REQUIRE(1.4)
 
 INCLUDE def_ahb_matrix_static.txt
 
+STARTUSER
+  
 SWAP.GLOBAL #FFD  #1                                 ##flip-flop delay
 
 SWAP.USER PREFIX     ahb_matrix_MASTER_NUM_SLAVE_NUM      ##Prefix for all module and file names
